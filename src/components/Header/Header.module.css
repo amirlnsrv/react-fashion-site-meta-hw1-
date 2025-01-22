@@ -1,0 +1,33 @@
+.headerInner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 0;
+}
+
+.headerLogo {
+	font-family: "Poppins-Bold";
+	font-size: 28px;
+	color: #22262a;
+}
+
+.headerNav ul {
+	display: flex;
+	align-items: center;
+}
+.headerNav ul li a {
+	text-transform: uppercase;
+	font-family: "Poppins-Regular";
+	font-size: 16px;
+	color: #22262a;
+	margin-left: 20px;
+}
+
+.headerWidgets {
+	display: flex;
+	align-items: center;
+}
+.headerWidget {
+	margin-left: 30px;
+	cursor: pointer;
+}
