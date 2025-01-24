@@ -1,0 +1,24 @@
+.cardSuptitle {
+	margin-top: 38px;
+	font-family: Poppins-Light;
+	font-size: 15px;
+	color: #22262a;
+}
+.cardTitle {
+	font-family: Poppins-SemiBold;
+	font-size: 15px;
+	color: #22262a;
+	margin-top: 3px;
+}
+.cardPrice {
+	font-family: Poppins-Regular;
+	font-size: 15px;
+	display: flex;
+	gap: 30px;
+	color: #cf2929;
+	margin-top: 3px;
+}
+.cardPrice span {
+	color: #22262a;
+	text-decoration: line-through;
+}
