@@ -14,10 +14,3 @@
 	font-size: 15px;
 	color: #22262a;
 }
-
-.cards {
-	margin-top: 65px;
-	display: flex;
-	align-items: center;
-	gap: 22px;
-}

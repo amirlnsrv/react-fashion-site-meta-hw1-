@@ -10,7 +10,7 @@ const Header = () => {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.headerInner}>
-          <p className={styles.headerLogo}>YOUR LOGO</p>
+          <p className="headerLogo">YOUR LOGO</p>
           <nav className={styles.headerNav}>
             <ul>
               <li className={styles.headerItem}>
