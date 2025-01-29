@@ -5,7 +5,13 @@ import cartIcon from "../../images/cart.svg";
 
 import styles from "./Header.module.css";
 
+import LoginModal from "../LoginModal";
+
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
   return (
     <header className={styles.header}>
       <div className="container">
@@ -44,6 +50,9 @@ const Header = () => {
               <img src={cartIcon} alt="cart-icon" />
             </div>
           </div>
+
+          <button onClick={toggleMenu}>Войти</button>
+          {isOpen && <LoginModal onClose={toggleMenu} />}
         </div>
       </div>
     </header>
