@@ -1,5 +1,5 @@
-import React from "react";
 import styles from "./LoginModal.module.scss";
+import Timer from "../Timer";
 
 const LoginModal = ({ onClose }) => {
   return (
@@ -14,6 +14,7 @@ const LoginModal = ({ onClose }) => {
         <input placeholder="Пароль" autoComplete="off" />
         <button className={styles.btn_login}>Login</button>
       </section>
+      <Timer />
     </section>
   );
 };

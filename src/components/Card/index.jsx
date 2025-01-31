@@ -16,9 +16,11 @@ export const Card = ({ imgLink, title, oldprice, price }) => {
         <span>{oldprice}</span> {price}
       </p>
       <div className={styles.cardFooter}>
-        <button onClick={decrement} className={styles.btnToCart}>
-          -
-        </button>
+        {count > 0 && (
+          <button onClick={decrement} className={styles.btnToCart}>
+            -
+          </button>
+        )}
         <p className={styles.cartCounter}>{count}</p>
         <button onClick={increment} className={styles.btnToCart}>
           +

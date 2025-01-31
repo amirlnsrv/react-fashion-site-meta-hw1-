@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import searchIcon from "../../images/search.svg";
 import favoriteIcon from "../../images/favorite.svg";
 import cartIcon from "../../images/cart.svg";
@@ -8,7 +8,7 @@ import styles from "./Header.module.css";
 import LoginModal from "../LoginModal";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
