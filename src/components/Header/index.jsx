@@ -45,17 +45,21 @@ const Header = () => {
       <div className="container">
         <div className={styles.headerInner}>
           <p className="headerLogo">YOUR LOGO</p>
+
           <nav className={styles.headerNav}>
-            <ul>
-              {routes.map((route, idx) => (
-                <li className={styles.headerItem}>
-                  <NavLink key={idx} to={route.path}>
-                    {route.title}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+            {routes.map((route, idx) => (
+              <NavLink
+                key={idx}
+                to={route.path}
+                className={({ isActive }) =>
+                  isActive ? `${styles.activeLink} ${styles.link}` : styles.link
+                }
+              >
+                {route.title}
+              </NavLink>
+            ))}
           </nav>
+
           <div className={styles.headerWidgets}>
             <div className={styles.headerWidget}>
               <img src={searchIcon} alt="search-icon" />

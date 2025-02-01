@@ -5,16 +5,21 @@
 	padding: 20px 0;
 }
 
-.headerNav ul {
+.headerNav {
 	display: flex;
 	align-items: center;
 }
-.headerNav ul li a {
+
+.link {
 	text-transform: uppercase;
 	font-family: "Poppins-Regular";
 	font-size: 16px;
 	color: #22262a;
 	margin-left: 20px;
+}
+
+.activeLink {
+	font-family: "Poppins-Semibold";
 }
 
 .headerWidgets {
