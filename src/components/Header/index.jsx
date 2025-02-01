@@ -6,6 +6,34 @@ import cartIcon from "../../images/cart.svg";
 import styles from "./Header.module.css";
 
 import LoginModal from "../LoginModal";
+import { NavLink } from "react-router-dom";
+
+const routes = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Shop",
+    path: "/shop",
+  },
+  {
+    title: "Lookbook",
+    path: "/lookbook",
+  },
+  {
+    title: "Features",
+    path: "/features",
+  },
+  {
+    title: "Pages",
+    path: "/pages",
+  },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
+];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,24 +47,13 @@ const Header = () => {
           <p className="headerLogo">YOUR LOGO</p>
           <nav className={styles.headerNav}>
             <ul>
-              <li className={styles.headerItem}>
-                <a href="#">Home</a>
-              </li>
-              <li className={styles.headerItem}>
-                <a href="#">Shop</a>
-              </li>
-              <li className={styles.headerItem}>
-                <a href="#">Lookbook</a>
-              </li>
-              <li className={styles.headerItem}>
-                <a href="#">Features</a>
-              </li>
-              <li className={styles.headerItem}>
-                <a href="#">Pages</a>
-              </li>
-              <li className={styles.headerItem}>
-                <a href="#">Blog</a>
-              </li>
+              {routes.map((route, idx) => (
+                <li className={styles.headerItem}>
+                  <NavLink key={idx} to={route.path}>
+                    {route.title}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </nav>
           <div className={styles.headerWidgets}>
