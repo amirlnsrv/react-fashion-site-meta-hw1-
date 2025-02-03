@@ -1,3 +1,7 @@
+.card {
+	cursor: pointer;
+}
+
 .cardSuptitle {
 	margin-top: 38px;
 	font-family: Poppins-Light;

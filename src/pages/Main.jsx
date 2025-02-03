@@ -4,10 +4,10 @@ import Womens from "../components/Womens";
 
 const Main = () => {
   return (
-    <>
+    <main>
       <Intro />
       <Womens />
-    </>
+    </main>
   );
 };
 

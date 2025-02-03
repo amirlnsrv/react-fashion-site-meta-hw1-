@@ -10,6 +10,7 @@ const Cards = ({ cardsInfo }) => {
       {cardsInfo.map((cardInfo, idx) => (
         <Card
           key={idx}
+          id={cardInfo.id}
           imgLink={cardInfo.imgLink}
           title={cardInfo.title}
           oldprice={cardInfo.oldprice}

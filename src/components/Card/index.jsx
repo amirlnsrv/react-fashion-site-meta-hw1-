@@ -1,14 +1,17 @@
 import React from "react";
 import styles from "./Card.module.css";
+import { useNavigate } from "react-router-dom";
 
-export const Card = ({ imgLink, title, oldprice, price }) => {
+export const Card = ({ imgLink, title, oldprice, price, id }) => {
+  const redirect = useNavigate();
+
   const [count, setCount] = React.useState(0);
 
   const increment = () => setCount((prev) => prev + 1);
   const decrement = () => setCount((prev) => prev - 1);
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} onClick={() => redirect(`/product/${id}`)}>
       <img src={imgLink} alt={title} />
       <p className={styles.cardSuptitle}>IGURE</p>
       <p className={styles.cardTitle}>{title}</p>
