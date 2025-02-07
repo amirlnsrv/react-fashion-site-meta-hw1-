@@ -6,7 +6,7 @@ import cartIcon from "../../images/cart.svg";
 import styles from "./Header.module.css";
 
 import LoginModal from "../LoginModal";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const routes = [
   {
@@ -37,6 +37,7 @@ const routes = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -67,7 +68,10 @@ const Header = () => {
             <div className={styles.headerWidget}>
               <img src={favoriteIcon} alt="favorite-icon" />
             </div>
-            <div className={styles.headerWidget}>
+            <div
+              className={styles.headerWidget}
+              onClick={() => navigate("/cart")}
+            >
               <img src={cartIcon} alt="cart-icon" />
             </div>
           </div>

@@ -15,6 +15,10 @@ const ProductDetail = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const addToOrder = () => {
+    navigate("/cart", { state: currentProduct });
+  };
+
   return (
     <main>
       <div className="container">
@@ -23,6 +27,7 @@ const ProductDetail = () => {
         <h3>{currentProduct.title}</h3>
         <p>цена: {currentProduct.price} сом.</p>
         <img src={currentProduct.imgLink} alt="product-image" width={500} />
+        <button onClick={addToOrder}>Оформить заказ</button>
       </div>
     </main>
   );

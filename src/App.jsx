@@ -9,6 +9,7 @@ import Features from "./pages/Features";
 import Pages from "./pages/Pages";
 import Blog from "./pages/Blog";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/pages" element={<Pages />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="*" element={<h1>Ошибка 404. Не найдено</h1>} />
           </Routes>
         </div>
