@@ -9,7 +9,7 @@ const Cards = ({ cardsInfo }) => {
     <div className={styles.cards}>
       {cardsInfo.map((cardInfo, idx) => (
         <Card
-          key={idx}
+          key={cardInfo.id}
           id={cardInfo.id}
           imgLink={cardInfo.imgLink}
           title={cardInfo.title}
