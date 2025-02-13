@@ -4,7 +4,7 @@ import styles from "./Cards.module.css";
 
 import { Card } from "../Card";
 
-const Cards = ({ cardsInfo }) => {
+const Cards = ({ cardsInfo, cart, addToCart }) => {
   return (
     <div className={styles.cards}>
       {cardsInfo.map((cardInfo, idx) => (
@@ -15,6 +15,8 @@ const Cards = ({ cardsInfo }) => {
           title={cardInfo.title}
           oldprice={cardInfo.oldprice}
           price={cardInfo.price}
+          cart={cart}
+          addToCart={addToCart}
         />
       ))}
     </div>

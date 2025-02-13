@@ -4,7 +4,7 @@ import styles from "./Womens.module.css";
 import Cards from "../Cards";
 import { womensData } from "../../mock/womensData.mock";
 
-const Womens = () => {
+const Womens = ({ addToCart, cart }) => {
   return (
     <div className={styles.womensfashion}>
       <p className={styles.womensfashionTitle}>WOMEN’S FASHION</p>
@@ -12,7 +12,7 @@ const Womens = () => {
         Shop our new arrivals from established brands
       </p>
       <div className="container">
-        <Cards cardsInfo={womensData} />
+        <Cards cardsInfo={womensData} addToCart={addToCart} cart={cart} />
       </div>
     </div>
   );

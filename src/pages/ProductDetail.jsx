@@ -16,7 +16,7 @@ const ProductDetail = () => {
   }, []);
 
   const addToOrder = () => {
-    navigate("/cart", { state: currentProduct });
+    navigate("/order", { state: currentProduct });
   };
 
   return (

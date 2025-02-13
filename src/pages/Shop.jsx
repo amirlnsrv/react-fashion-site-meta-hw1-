@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import Cards from "../components/Cards";
 import { womensData } from "../mock/womensData.mock";
 
-const Shop = () => {
+const Shop = ({ cart, addToCart }) => {
   const [search, setSearch] = useState("");
 
   const filterProducts = useMemo(() => {
@@ -24,7 +24,7 @@ const Shop = () => {
         onChange={(e) => setSearch(e.target.value)}
       />
 
-      <Cards cardsInfo={filterProducts} />
+      <Cards cardsInfo={filterProducts} addToCart={addToCart} cart={cart} />
     </div>
   );
 };
