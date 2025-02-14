@@ -12,6 +12,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
 import { useState } from "react";
 import Order from "./pages/Order";
+import UseRefComponent from "./components/UseRefComponent";
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -45,6 +46,7 @@ function App() {
             <Route path="*" element={<h1>Ошибка 404. Не найдено</h1>} />
           </Routes>
         </div>
+        <UseRefComponent />
         <Footer />
       </BrowserRouter>
     </div>
